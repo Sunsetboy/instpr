@@ -1,0 +1,11 @@
+version: "3.0"
+services:
+  php:
+    container_name: instapro_php
+    ports:
+      - 8000:8000
+    build:
+      context: .
+    volumes:
+      - ".:/var/www/instapro"
+    command: symfony server:start
