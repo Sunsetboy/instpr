@@ -3,8 +3,15 @@
 {% block title %}Your URL shortened{% endblock %}
 
 {% block body %}
-    <form method="post" action="{{ path('shorten_url') }}">
-        <input type="text" name="url" />
-        <button type="submit">Shorten it!</button>
-    </form>
+    <div class="form-wrapper">
+        <form method="post" action="{{ path('shorten_url') }}" class="row row-cols-lg-auto g-3 align-items-center">
+            <div class="col-12">
+                <input type="text" class="form-control" name="url"
+                       placeholder="http://example.com/path/to/my-super-article"/>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Shorten it!</button>
+            </div>
+        </form>
+    </div>
 {% endblock %}

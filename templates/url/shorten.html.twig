@@ -3,11 +3,14 @@
 {% block title %}Your URL shortened{% endblock %}
 
 {% block body %}
-    <p>
-        {{ shortUrl }}
-    </p>
+    <div class="form-wrapper">
+        <h2>Your short URL</h2>
+        <p>
+            {{ shortUrl }}
+        </p>
 
-    <p>
-        <a href="{{ path('new_url') }}">Shorten another URL</a>
-    </p>
+        <p>
+            <a href="{{ path('new_url') }}">Shorten another URL</a>
+        </p>
+    </div>
 {% endblock %}
