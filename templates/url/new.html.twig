@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your URL shortened{% endblock %}
+
+{% block body %}
+    <form method="post" action="{{ path('shorten_url') }}">
+        <input type="text" name="url" />
+        <button type="submit">Shorten it!</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Your URL shortened{% endblock %}
+
+{% block body %}
+    <p>
+        {{ shortUrl }}
+    </p>
+
+    <p>
+        <a href="{{ path('new_url') }}">Shorten another URL</a>
+    </p>
+{% endblock %}
