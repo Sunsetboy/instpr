@@ -40,5 +40,3 @@ WORKDIR /var/www/instapro
 ADD php.ini /usr/local/etc/php/conf.d/40-custom.ini
 
 USER developer
-
-#CMD ["symfony server:start"]

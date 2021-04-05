@@ -8,4 +8,4 @@ services:
       context: .
     volumes:
       - ".:/var/www/instapro"
-    command: symfony server:start
+    command: bash -c 'composer install && symfony server:start'
