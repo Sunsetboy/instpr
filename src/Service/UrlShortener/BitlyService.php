@@ -28,7 +28,6 @@ class BitlyService implements LinkShortenerInterface
                 ],
                 'body' => json_encode(["long_url" => $originalUrl]),
             ]
-
         );
 
         $statusCode = $response->getStatusCode();

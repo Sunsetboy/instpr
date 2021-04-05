@@ -22,3 +22,10 @@ Run tests with coverage report
 ```
 docker-compose run php bin/phpunit --coverage-html var/coverage --coverage-text
 ```
+OR, log in a running container and run tests
+```
+docker exec -ti instapro_php bash
+bin/phpunit --coverage-html var/coverage --coverage-text
+```
+
+You can find a coverage report in the var/coverage folder of the project
