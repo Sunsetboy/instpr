@@ -10,6 +10,8 @@
 * Go to the project folder
 * Run `docker-compose build`
 * Run `docker-compose up`
+* Create a file `.env.local` and add your bitly token
+  ```BITLY_TOKEN=your_token_here```
 * Open `http://localhost:8000/url/new` in browser
 
 ## Running tests

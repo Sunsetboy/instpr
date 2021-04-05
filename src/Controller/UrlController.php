@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Service\UrlService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -10,6 +11,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class UrlController extends AbstractController
 {
+
+    private UrlService $urlService;
+
+    public function __construct(UrlService $urlService)
+    {
+        $this->urlService = $urlService;
+    }
+
     /**
      * @Route("/url/shorten", name="shorten_url", methods={"POST"})
      */
@@ -21,7 +30,7 @@ class UrlController extends AbstractController
             throw new HttpException(400, 'Incorrect URL');
         }
 
-        $shortUrl = 'http://sho.rt/1232djghj';
+        $shortUrl = $this->urlService->shortenUrl($fullUrl);
 
         return $this->render('url/shorten.html.twig', [
             'shortUrl' => $shortUrl,
